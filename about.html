@@ -1,0 +1,202 @@
+<!-- Users can send me messages painlessly via email (no pop-ups), through Formspree forms and bind to your email address -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn more about my journey from teacher to tech enthusiast. With a unique blend of communication, design, and IT skills, I'm building my future in tech.">
+    <meta name="author" content="Zhiying Wang">
+    <meta property="og:title" content="About – Jane's Portfolio">
+    <meta property="og:description"
+        content="Learn more about Jane – a passionate creative blending design, development, and digital storytelling.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jane's Portfolio">
+    <meta property="og:url" content="https://janeo0o.ct.ws/about.html">
+    <meta property="og:image" content="https://janeo0o.ct.ws/images/jane-icon.png">
+    <title>About Jane</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern-normalize-minified.css">
+    <script src="https://kit.fontawesome.com/fab0ef6d11.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/jane-icon.png" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KY4PTZLYZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0KY4PTZLYZ');
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <img class="mainImage" src="images/janeo0o.png" alt="Profile Image">
+        <img class="mainImage2" src="images/jane.png" alt="Logo">
+
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-list">
+                <li><a href="index.html">Project Showcase</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Ping Me</a></li>
+                <li><a class="current" href="about.html">Jane?</a></li>
+            </ul>
+        </nav>
+
+        <div class="content-container">
+            <main>
+
+                <section id="about" class="content-section">
+                    <h2>My Story</h2>
+                    <div class="about-content">
+                        <div class="about-half">
+                            <h3>First Half of My Life</h3>
+                            <p>I started out as a teacher—a role that taught me more than just how to instruct. It gave
+                                me patience, perseverance, and a deep respect for building trust in professional
+                                relationships. The challenges I faced in that chapter of life helped shape my mindset
+                                and work ethic.</p>
+                            <p>While still working as a teacher, I began exploring graphic design and IT support on the
+                                side. What started as a curiosity slowly grew into a real passion. This blend of
+                                creativity and technology opened new doors for me and ultimately guided my transition
+                                into the IT field.</p>
+                            <p>Most recently, I completed a series of IT courses at TAFE, finishing my Diploma in IT and
+                                now preparing to receive my certification. While I may not yet have extensive local
+                                experience in Australia, I’m confident that my drive to grow, adapt, and learn will keep
+                                pushing me forward in the IT field.</p>
+                        </div>
+                        <div class="about-half">
+                            <h3>Second Half of My Life</h3>
+                            <p>
+                                With a foundation built on education, creativity, and a growing technical skillset, I’m
+                                now fully focused on building my future in the IT industry.
+                            </p>
+                            <p>
+                                My experience as a teacher has equipped me with strong communication, problem-solving,
+                                and collaboration skills—qualities that are just as valuable in tech. Along the way,
+                                I’ve developed a deep interest in technology and digital solutions, and have worked hard
+                                to back that passion with real skills through formal IT training and hands-on practice.
+                            </p>
+                            <p>
+                                I may not have years of local industry experience yet, but I make up for it with
+                                motivation, adaptability, and a genuine drive to grow. I’m eager to contribute, to learn
+                                from others, and to be part of something meaningful.
+                            </p>
+                            <p>
+                                I believe that every team deserves someone who is not only technically capable but also
+                                open-minded, dependable, and willing to keep growing. I hope to bring that energy
+                                wherever I go—and I’d be truly grateful for the opportunity to prove it.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jane's Page. All rights reserved.</p>
+        <div class="social-links">
+            <a href="tel:+61426249513"><i class="fas fa-phone"></i></a>&nbsp;&nbsp;
+            <a href="mailto:wzhiy.ren@gmail.com" target="_blank" aria-label="Email"><i
+                    class="fas fa-envelope"></i></a>&nbsp;&nbsp;
+            <a href="https://wa.me/61426249513?text=Hi%2C%20I%27m%20interested%20in%20your%20work." target="_blank"
+                aria-label="WhatsApp" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>&nbsp;&nbsp;
+            <a href="https://www.facebook.com/zhiying.wang.624725" target="_blank" aria-label="Facebook"><i
+                    class="fab fa-facebook"></i></a>&nbsp;&nbsp;
+            <a href="https://www.instagram.com/zhiying874/" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>&nbsp;&nbsp;
+            <!-- Wechat -->
+            <div class="wechat-contact">
+                <a href="javascript:void(0);" onclick="toggleWechatQR()" aria-label="contact by wechat">
+                    <i class="fab fa-weixin"></i>
+                </a>
+
+                <!-- wechat QR code pop up -->
+                <div class="wechat-qr-popup" id="wechatQRPopup">
+                    <div class="qr-container">
+                        <span class="close-btn" onclick="toggleWechatQR()">&times;</span>
+                        <p>Scan the QR code to add my WeChat</p>
+                        <img src="images/wechat-qr-code.jpg" alt="wechat QR code" class="qr-code">
+                        <p>Wechat ID: wzhiy2xiaomao</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-list').classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // ===========WeChat==========
+        function toggleWechatQR() {
+            const popup = document.getElementById('wechatQRPopup');
+            if (popup.style.display === 'flex') {
+                popup.style.display = 'none';
+            } else {
+                popup.style.display = 'flex';
+            }
+        }
+
+        // click outside to close
+        window.onclick = function (event) {
+            const popup = document.getElementById('wechatQRPopup');
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        }
+        // =======end of WeChat=========
+
+        // 
+
+
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch("https://formspree.io/f/xovwegvz", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        Accept: "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    status.textContent = "Message sent successfully ✅";
+                    form.reset();
+                } else {
+                    status.textContent = "Something went wrong. Please try again.";
+                }
+            } catch (error) {
+                status.textContent = "Network error. Please check your connection.";
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

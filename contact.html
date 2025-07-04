@@ -1,0 +1,179 @@
+<!-- Users can send me messages painlessly via email (no pop-ups), through Formspree forms and bind to your email address -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get in touch! Whether it’s a collaboration, job opportunity, or just to say hi—I'd love to hear from you. Let's build something great together.">
+    <meta name="author" content="Zhiying Wang">
+    <meta property="og:title" content="Contact – Jane's Portfolio">
+    <meta property="og:description"
+        content="Get in touch with Jane for collaborations, projects, or creative inquiries. Let's connect.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jane's' Portfolio">
+    <meta property="og:url" content="https://janeo0o.ct.ws/contact.html">
+    <meta property="og:image" content="https://janeo0o.ct.ws/images/jane-icon.png">
+    <title>Ping Jane</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern-normalize-minified.css">
+    <script src="https://kit.fontawesome.com/fab0ef6d11.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/jane-icon.png" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KY4PTZLYZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0KY4PTZLYZ');
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <img class="mainImage" src="images/janeo0o.png" alt="Profile Image">
+        <img class="mainImage2" src="images/jane.png" alt="Logo">
+
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-list">
+                <li><a href="index.html">Project Showcase</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a class="current" href="contact.html">Ping Me</a></li>
+                <li><a href="about.html">Jane?</a></li>
+            </ul>
+        </nav>
+
+        <div class="content-container">
+            <main>
+                <section id="contact" class="content-section">
+                    <h2>Beam Me a Message 🚀</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">How do you want me to call you?</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email (I'll get back to you soon.)</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Feel free to drop me a message!</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        <p id="form-status" style="margin-top: 10px;"></p>
+                        <br>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jane's Page. All rights reserved.</p>
+        <div class="social-links">
+            <a href="tel:+61426249513"><i class="fas fa-phone"></i></a>&nbsp;&nbsp;
+            <a href="mailto:wzhiy.ren@gmail.com" target="_blank" aria-label="Email"><i
+                    class="fas fa-envelope"></i></a>&nbsp;&nbsp;
+            <a href="https://wa.me/61426249513?text=Hi%2C%20I%27m%20interested%20in%20your%20work." target="_blank"
+                aria-label="WhatsApp" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>&nbsp;&nbsp;
+            <a href="https://www.facebook.com/zhiying.wang.624725" target="_blank" aria-label="Facebook"><i
+                    class="fab fa-facebook"></i></a>&nbsp;&nbsp;
+            <a href="https://www.instagram.com/zhiying874/" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>&nbsp;&nbsp;
+            <!-- Wechat -->
+            <div class="wechat-contact">
+                <a href="javascript:void(0);" onclick="toggleWechatQR()" aria-label="contact by wechat">
+                    <i class="fab fa-weixin"></i>
+                </a>
+
+                <!-- wechat QR code pop up -->
+                <div class="wechat-qr-popup" id="wechatQRPopup">
+                    <div class="qr-container">
+                        <span class="close-btn" onclick="toggleWechatQR()">&times;</span>
+                        <p>Scan the QR code to add my WeChat</p>
+                        <img src="images/wechat-qr-code.jpg" alt="wechat QR code" class="qr-code">
+                        <p>Wechat ID: wzhiy2xiaomao</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-list').classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // ===========WeChat==========
+        function toggleWechatQR() {
+            const popup = document.getElementById('wechatQRPopup');
+            if (popup.style.display === 'flex') {
+                popup.style.display = 'none';
+            } else {
+                popup.style.display = 'flex';
+            }
+        }
+
+        // click outside to close
+        window.onclick = function (event) {
+            const popup = document.getElementById('wechatQRPopup');
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        }
+        // =======end of WeChat=========
+
+        // 
+
+
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch("https://formspree.io/f/xovwegvz", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        Accept: "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    status.textContent = "Message sent successfully ✅";
+                    form.reset();
+                } else {
+                    status.textContent = "Something went wrong. Please try again.";
+                }
+            } catch (error) {
+                status.textContent = "Network error. Please check your connection.";
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
